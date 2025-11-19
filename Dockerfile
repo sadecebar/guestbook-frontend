@@ -4,11 +4,7 @@ RUN rm -rf /opt/app-root/src/*
 
 COPY index.html /opt/app-root/src/index.html
 
-COPY nginx.conf /opt/app-root/etc/nginx.conf
-
-COPY server.conf /opt/app-root/etc/nginx.default.d/guestbook.conf
-
-USER 1001
+COPY nginx.conf /opt/app-root/etc/nginx.default.d/guestbook.conf
 
 EXPOSE 8080
 
