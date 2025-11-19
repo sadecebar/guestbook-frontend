@@ -5,7 +5,7 @@ RUN rm -rf /opt/app-root/src/*
 
 
 COPY index.html /opt/app-root/src/index.html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /opt/app-root/etc/nginx.default.d/default.conf
 
 EXPOSE 8080
 
