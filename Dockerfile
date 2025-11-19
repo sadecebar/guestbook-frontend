@@ -6,7 +6,7 @@ COPY index.html /opt/app-root/src/index.html
 
 COPY nginx.conf /opt/app-root/etc/nginx.conf
 COPY nginx.conf /opt/app-root/etc/nginx.d/global.conf
-COPY nginx.conf /opt/app-root/etc/nginx.default.d/guestbook.conf
+COPY server.conf /opt/app-root/etc/nginx.default.d/guestbook.conf
 
 USER 1001
 
