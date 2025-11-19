@@ -1,9 +1,13 @@
-FROM nginx:1.25-alpine
+FROM registry.access.redhat.com/ubi10/nginx-126:10.0
 
-WORKDIR /usr/share/nginx/html
 
-RUN rm -f /usr/share/nginx/html/*
+RUN rm -rf /opt/app-root/src/*
 
-COPY index.html /usr/share/nginx/html/index.html
 
+COPY index.html /opt/app-root/src/index.html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
+
